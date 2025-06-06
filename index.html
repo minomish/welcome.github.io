@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="kz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./src/image-first_couple.png" class="bg"/>
+        <img src="./src/opacity.png" class="blur"/>
+        <img src="./src/opacity.png"  class="blur"/>
+        <img src="./src/opacity.png"  class="blur1"/>
+        <h1 class="couple_name">Сансызбай & Жаным</h1>
+        <img src="./src/heard_line.png" class="heard_line"/>
+        <h3 class="header_date">04.08.2025</h3>
+        <div class="music-btn-wrapper">
+            <img src="./src/music.svg" class="music rotating-bg" />
+            <img id="music-btn" src="./play.svg" class="music-btn" />
+        </div>
+        <audio id="background-music" src="./music/ayen.mp3" loop></audio>
+    </header>
+
+    <script>
+    const music = document.getElementById('background-music');
+    const musicBtn = document.getElementById('music-btn');
+    let isMusicStarted = false;
+
+    const startMusicOnce = () => {
+      if (!isMusicStarted) {
+        music.play().then(() => {
+          musicBtn.src = './pause.svg';
+          isMusicStarted = true;
+        }).catch(err => {
+          console.log('Не удалось воспроизвести музыку:', err);
+        });
+      }
+    };
+
+    document.body.addEventListener('click', startMusicOnce, { once: true });
+
+    musicBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (music.paused) {
+        music.play();
+        musicBtn.src = './pause.svg';
+      } else {
+        music.pause();
+        musicBtn.src = './play.svg';
+      }
+    });
+  </script>
+
+  <main>
+    <p class="welcome_text">Құрметті<br />
+      ағайын-туыс, бауырлар,<br />
+      құда-жекжат,<br />
+      нағашы-жиен, бөлелер,<br />
+      дос-жаран, әріптестер<br />және көршілер!
+    </p>
+
+    <img src="./src/img_finger.PNG" class="bg"/>
+
+    <p class="welcome_text">
+      Сіз(дер)ді<br />
+      ұлымыз бен келініміз
+    </p>
+
+    <h1 class="couple_name2">Сансызбай мен Жанымның</h1>
+
+    <p class="welcome_text2">
+      Сізді ерекше сәтіміздің,<br />
+      бақытқа бастар маңызды<br />
+      қадамымыздың ең әдемі куәгері<br />
+      ретінде тойымыздың қадірлі<br />қонағы болуға шақырамыз.
+    </p>
+
+    <img src="./src/heard_wave.png" class="heard_wave"/>
+
+    <h2 class="beauty_text">Той салтанаты:</h2>
+
+    <img src="./src/img_date.PNG" class="bg" />
+    
+    <p class="welcome_text">
+      04 тамыз, 2025 жыл<br />
+      сағат 12:00-де
+    </p>
+
+    <div class="table">
+      <h2 class="beauty_text">Тамыз</h2>
+      <div class="line"></div>
+      <table>
+        <thead>
+          <tr>
+            <th>ДС</th><th>СС</th><th>СР</th><th>БС</th><th>ЖМ</th><th>СБ</th><th>ЖС</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+          <tr>
+            <td class="heart-cell">
+              4
+              <img src="./src/heard.png" alt="heart" class="heart">
+            </td>
+            <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+          <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+          <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+          <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="date">
+      <p class="date_text">
+        Той салтанатына<br />
+        дейін қалды:
+      </p>
+<script src="//megatimer.ru/get/c68c4e63ddba96520df1364d3de288d8.js"></script>
+    </div>
+
+    <div>
+      <div class="place_div">
+        <h2 class="beauty_text">Мекен-жайымыз</h2>
+        <p class="welcome_text">
+          Қарағанды қаласы<br />
+          "Duman" Мейрамханасы<br />
+          Premium залы
+        </p>
+        <div class="place">
+          <p class="help_text"> 
+            Сіздерге жетуге ыңғайлы <br />
+            болу үшін, төменде көрсетілген<br />
+            2GIS картасын қолданыңыз
+          </p>
+          <a href="https://2gis.kz/karaganda/geo/70000001031809965/73.155193,49.762857" class="btn_submit">Картадан көру</a>
+        </div>  
+        <h2 class="beauty_text" style="margin-top: 100px;">Той иелері:</h2>
+        <h2 class="beauty_text">Оранбек - Бейбітхан</h2>
+      </div>
+      <img src="./src/image_couple.jpg" class="bg" />
+    </div>
+
+    <div class="form_container">
+    <form id="rsvp-form">
+    <p class="form-text">Аты-жөніңізді жазыңыз,<br />
+          (жұбайыңызбен келетін болсаңыз, есімдеріңізді бірге жазуды өтінеміз)</p>
+    <input type="text" name="entry.1658042536" required class="form_input"/>
+
+    <div class="ratioDiv">
+      <p class="form-text">Tойымызға келесіз бе?</p>
+      <label class="form-radio">
+        <input type="radio" name="entry.875852943" value="Әрине, келемін!" required />
+        Әрине, келемін!
+      </label>
+      <label class="form-radio">
+        <input type="radio" name="entry.875852943" value="Жұбайыммен келемін!" />
+        Жұбайыммен келемін!
+      </label>
+      <label class="form-radio">
+        <input type="radio" name="entry.875852943" value="Өкінішке орай, келе алмаймын" />
+        Өкінішке орай, келе алмаймын
+      </label>
+    </div>
+
+    <button type="submit" class="btn_submit">Жауапты жіберу</button>
+  </form>
+
+  <p id="message" class="hidden">Рақмет! Жауабыңыз қабылданды.</p>
+</div>
+  <script>
+    const form = document.getElementById('rsvp-form');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("https://docs.google.com/forms/d/e/1FAIpQLSefe9sKBgwB7Z79HRdB7NdrqluHIPl4KfyXQ9GKc8aF4ZVoOw/formResponse", {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      }).then(() => {
+        // ❗ Форма остаётся, сообщение появляется СНИЗУ
+        message.classList.remove('hidden');
+        form.reset(); // очищает поля
+      }).catch(() => {
+        alert("Қате пайда болды. Қайтадан көріңіз.");
+      });
+    });
+  </script>
+
+  </main>
+
+  <footer>
+    <img src="./src/heard_wave.png" class="heard_wave"/>
+    <h2 class="beauty_text" style="margin-bottom: 120px;">Қуанышымыздың<br />куәсі болыңыздар!</h2>
+  </footer>
+    
+</body>
+</html>
