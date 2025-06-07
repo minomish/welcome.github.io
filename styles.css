@@ -63,6 +63,7 @@ header{
   margin: 0;
   font-size: 11vw;
   text-align: center;
+  font-weight: 500;
 }
 
 .heard_line{
@@ -349,4 +350,30 @@ input:focus {
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+}
+
+.place_div2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.place_div2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  top: -75px;
+  background-image: url('src/material.png');
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+  transform: scaleX(-1); 
+}
+
+.place_div2 > * {
+  position: relative;
+  z-index: 1;
 }
