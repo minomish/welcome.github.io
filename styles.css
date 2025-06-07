@@ -123,10 +123,6 @@ header{
   pointer-events: auto;
 }
 
-main{
-  margin-top: 150px;
-}
-
 .welcome_text{
   margin: 0;
   font-size: 4.5vw;
